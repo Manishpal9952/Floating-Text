@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Text</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background-color: rgb(235, 149, 37);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            float: left;
+            font-size: 8em;
+            font-weight: 800;
+            font-family: "arial black";
+        }
+        ul li:nth-child(even){
+            animation: animateEven 3s linear infinite;
+        }
+        ul li:nth-child(odd){
+            animation: animateOdd 3s linear infinite;
+        }
+        @keyframes animateEven{
+            0%{
+                transform: rotate(20deg);
+            }
+            25%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(-20deg);
+            }
+            75%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(20deg);
+            }
+        }
+        @keyframes animateOdd{
+            0%{
+                transform: rotate(-20deg);
+            }
+            25%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(20deg);
+            }
+            75%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(-20deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>F</li>
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>T</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+    </ul>
+</body>
+</html>
